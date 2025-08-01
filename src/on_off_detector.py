@@ -191,7 +191,7 @@ def day_occurence(column_name):
             late_night = late_night + 1
     
     # Writes to file the occurences for each time of day
-    file.write(f'morning,{morning}\nmidday,{midday}\nevening,{evening}\nlate_nigh,{late_night}') 
+    file.write(f'morning,{morning}\nmidday,{midday}\nevening,{evening}\nlate_night,{late_night}') 
     file.close()
     
     # Reads the output file
