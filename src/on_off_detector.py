@@ -158,10 +158,9 @@ def day_occurence(column_name):
     df = pd.read_csv(f'{column_name}/{column_name}_output.csv', names=['start_time', 'end_time'])
     # Gets date from start_time 
     df['date'] = pd.to_datetime(df['start_time']).dt.date
-    # Gets time from both start_time and end_time
+    # Gets time from both start_time
     df['start_time'] = pd.to_datetime(df['start_time']).dt.time
-    df['end_time'] = pd.to_datetime(df['end_time']).dt.time
-    
+
     # Create output file
     define_folder(f'{column_name}', f'{column_name}_day_occurence.csv')
     file = open(file_path, 'w')
@@ -639,7 +638,7 @@ def main(device, column_number, off_value):
     mplcursors.cursor(hover=True)
     plt.show()
     
-# main('car', 1, 0.005)
+main('car', 1, 0.005)
 # main('dishwasher', 2, 0.01)
 # main('kitchen', 3, 0.005)
 # main('microwave', 4, 0.005)
@@ -650,10 +649,10 @@ def main(device, column_number, off_value):
 # main('clothes_washer', 9, 0.005)
 
 # Testing experimental method
-read('NewProfiles.csv','car',1,0.005)
-read('NewProfiles.csv','dishwasher',2,0.01)
-read('NewProfiles.csv','kitchen',3,0.005)
-read('NewProfiles.csv','microwave',4,0.005)
-read('NewProfiles.csv','range',5,0.005)
-read('NewProfiles.csv','bathroom',6,0.25)
-read('NewProfiles.csv','bedroom',7,0.9)
+# read('NewProfiles.csv','car',1,0.005)
+# read('NewProfiles.csv','dishwasher',2,0.01)
+# read('NewProfiles.csv','kitchen',3,0.005)
+# read('NewProfiles.csv','microwave',4,0.005)
+# read('NewProfiles.csv','range',5,0.005)
+# read('NewProfiles.csv','bathroom',6,0.25)
+# read('NewProfiles.csv','bedroom',7,0.9)
